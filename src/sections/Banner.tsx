@@ -1,10 +1,11 @@
 import {Box, Container, Heading, Image, Text,} from 'theme-ui';
 import banner from '../assets/images/banner.png';
 import {rgba} from 'polished';
+import Routes from "../constants/routes";
 
 const Banner = () => {
     return (
-        <Box as="section" id="home" sx={styles.section}>
+        <Box as="section" id="home">
             <Container>
                 <Box sx={styles.contentWrapper}>
                     <Box sx={styles.content}>
@@ -20,16 +21,16 @@ const Banner = () => {
                         }}>
 
                         </div>
-                        <a href="https://app.hourcalendar.com" target="_blank" sx={styles.button}>
+                        <a href={Routes.app} target="_blank" referrerPolicy="no-referrer" style={styles.button}>
                             START FOR FREE
                         </a>
-                        <a href="#" className="link" style={{
-                            color: '#546681',
-                            fontSize: 16,
-                            textDecoration: 'none',
-                        }}>
-                            See the features
-                        </a>
+                        {/*<a href="#" className="link" style={{*/}
+                        {/*    color: '#546681',*/}
+                        {/*    fontSize: 16,*/}
+                        {/*    textDecoration: 'none',*/}
+                        {/*}}>*/}
+                        {/*    See the features*/}
+                        {/*</a>*/}
                     </Box>
                     <Box as="figure" sx={styles.illustration}>
                         <Image src={banner} alt="banner"/>

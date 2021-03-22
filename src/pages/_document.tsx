@@ -12,6 +12,7 @@ class AppDocument extends Document {
             <Html lang="en-US">
                 <Head>
                     <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8'/>
+
                     <meta property='og:type' content='Website'/>
                     <meta property='og:url' content='https://hourcalendar.com'/>
                     <meta property='og:title' content='Hour Calendar'/>
@@ -29,6 +30,7 @@ class AppDocument extends Document {
                         crossOrigin="anonymous"
                         href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap"
                     />
+
                 </Head>
                 <body>
                 <Main/>

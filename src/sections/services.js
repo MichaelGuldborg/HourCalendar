@@ -1,6 +1,6 @@
 
 import { jsx, Box, Container } from 'theme-ui';
-import SectionHeading from 'components/section-heading';
+import SectionHeader from 'components/layout/SectionHeader';
 import Feature from 'components/cards/feature';
 
 import individual from 'assets/icons/individual.png';
@@ -32,7 +32,7 @@ const Services = () => {
   return (
     <Box as="section" id="services" variant="section.features">
       <Container>
-        <SectionHeading
+        <SectionHeader
           sx={styles.heading}
           title="Successful business start with great feature"
           description="Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents."

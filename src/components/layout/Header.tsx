@@ -1,9 +1,7 @@
-import {Box, Button, Container, Flex} from 'theme-ui';
+import {Box, Button, Container} from 'theme-ui';
 import Sticky from 'react-stickynode';
 import Logo from '../common/Logo';
-import {NavLink} from '../link';
-import DrawerNav from './drawer-nav';
-import menuItems from './header.data';
+import Routes from "../../constants/routes";
 
 export default function Header() {
     return (
@@ -12,23 +10,13 @@ export default function Header() {
                 <Box as="header" variant="layout.header">
                     <Container>
                         <Box sx={styles.headerInner}>
-                            <Logo sx={styles.logo}/>
-                            <Flex as="nav" sx={styles.navbar} className="navbar">
-                                <Box as="ul" sx={styles.navList}>
-                                    {menuItems.map(({path, label}, i) => (
-                                        <li key={i}>
-                                            <NavLink path={path} label={label}/>
-                                        </li>
-                                    ))}
-                                </Box>
-                                <Button variant="text" sx={styles.getStartedDesktop}>
+                            <Logo/>
+                            <a href={Routes.app} target="_blank" referrerPolicy="no-referrer"
+                               style={{textDecoration: 'none'}}>
+                                <Button variant="text" sx={styles.getStarted}>
                                     Get Started
                                 </Button>
-                            </Flex>
-                            <Button variant="text" sx={styles.getStartedMobile}>
-                                Get Started
-                            </Button>
-                            <DrawerNav/>
+                            </a>
                         </Box>
                     </Container>
                 </Box>
@@ -91,9 +79,6 @@ const styles = {
             },
         },
     },
-    logo: {
-        mr: [null, null, null, null, 50],
-    },
     navbar: {
         alignItems: 'center',
         flexGrow: 1,
@@ -116,17 +101,13 @@ const styles = {
             color: 'primary',
         },
     },
-    getStartedDesktop: {
-        color: '#484dff',
-        display: ['none', null, null, null, 'flex'],
-    },
-    getStartedMobile: {
+    getStarted: {
         color: '#484dff',
         fontSize: [12, null, null, 16],
         minHeight: 30,
         m: ['0 15px 0 auto'],
         padding: '0 11px',
-        display: ['flex', null, null, null, 'none'],
+        display: ['flex', null, null, null, 'flex'],
     },
     closeButton: {
         height: '32px',

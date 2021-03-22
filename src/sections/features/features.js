@@ -1,9 +1,10 @@
-
-import {Box, Container, Image, jsx} from 'theme-ui';
-import SectionHeading from 'components/section-heading';
+import {Box, Container, Heading, Image, Link as A, Text} from 'theme-ui';
+import SectionHeader from 'components/layout/SectionHeader';
 import Accordion from 'components/accordion/accordion';
 import feature from 'assets/images/feature.png';
 import emoji from 'assets/icons/emoji-2.png';
+import NextLink from "next/link";
+import {HiOutlineChevronRight} from "react-icons/hi";
 
 const data = [
     {
@@ -44,7 +45,7 @@ const Features = () => {
                         <Image src={feature} alt="feature"/>
                     </Box>
                     <Box sx={styles.rightContent}>
-                        <SectionHeading
+                        <SectionHeader
                             emoji={emoji}
                             sx={styles.heading}
                             title="Meet our exciting features that make you wow"
@@ -59,6 +60,26 @@ const Features = () => {
         </Box>
     );
 };
+
+const Feature = ({data, ...props}) => {
+    return (
+        <Box sx={styles.feature} {...props}>
+            <Box as="figure">
+                <Image src={data?.icon} alt={data?.title}/>
+            </Box>
+            <Box>
+                <Heading as="h3">{data?.title}</Heading>
+                <Text as="p">{data?.description}</Text>
+                {data?.path && <NextLink href={path}>
+                    <A sx={styles.learnMore} {...rest}>
+                        {label ?? 'Learn More'} <HiOutlineChevronRight/>
+                    </A>
+                </NextLink>}
+            </Box>
+        </Box>
+    );
+};
+
 
 export default Features;
 
@@ -105,6 +126,43 @@ const styles = {
                 backgroundColor: '#fff',
                 boxShadow: '0px 9px 30px rgba(69, 88, 157, 0.08)',
             },
+        },
+    },
+    learnMore: {
+        color: 'link',
+        cursor: 'pointer',
+        fontWeight: 500,
+        display: 'inline-flex',
+        alignItems: 'center',
+        svg: {
+            transition: 'margin-left 0.3s ease-in-out 0s',
+            ml: '3px',
+        },
+        ':hover': {
+            svg: {
+                ml: '5px',
+            },
+        },
+    },
+    feature: {
+        display: ['flex'],
+        figure: {
+            minWidth: [70],
+            mr: ['30px'],
+        },
+        h3: {
+            fontSize: '18px',
+            lineHeight: 1.28,
+            color: 'heading',
+            marginBottom: '20px',
+        },
+        p: {
+            fontSize: 16,
+            lineHeight: 1.88,
+            color: 'text',
+        },
+        a: {
+            mt: [3],
         },
     },
 };

@@ -1,7 +1,7 @@
 
 import { jsx, Box, Heading, Text, Image } from 'theme-ui';
 
-const SectionHeading = ({ title, description, emoji, ...props }) => {
+const SectionHeader = ({ title, description, emoji, ...props }) => {
   return (
     <Box sx={styles.heading} {...props}>
       <Heading sx={styles.title}>
@@ -15,7 +15,7 @@ const SectionHeading = ({ title, description, emoji, ...props }) => {
   );
 };
 
-export default SectionHeading;
+export default SectionHeader;
 
 const styles = {
   heading: {

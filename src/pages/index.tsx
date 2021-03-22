@@ -1,8 +1,8 @@
 import React from 'react';
 import {ThemeProvider} from "theme-ui";
 import SEO from '../components/common/SEO';
-import Layout from '../components/layout';
-import Banner from '../sections/banner';
+import Layout from '../components/layout/Layout';
+import Banner from '../sections/Banner';
 import theme from "../constants/theme";
 
 export const IndexPage = () => {

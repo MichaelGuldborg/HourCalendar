@@ -1,5 +1,5 @@
 import {Box, Container, Text} from 'theme-ui';
-import Logo from './common/Logo';
+import Logo from '../common/Logo';
 import {rgba} from 'polished';
 import React from "react";
 
