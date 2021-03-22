@@ -1,8 +1,9 @@
 import {Box, Container, Text} from 'theme-ui';
-import Logo from '../../components/logo';
+import Logo from './common/Logo';
 import {rgba} from 'polished';
+import React from "react";
 
-export default function Footer() {
+export const Footer = () => {
     return (
         <Box as="footer" variant="layout.footer">
             <Container>
@@ -17,7 +18,7 @@ export default function Footer() {
                         {/*    <Link path="#!">Privacy</Link>*/}
                         {/*</Box>*/}
                         <Text as="p" sx={styles.copyright}>
-                            Copyright by {new Date().getFullYear()} MKG Consulting ApS
+                            © {new Date().getFullYear()} MKG Consulting ApS
                         </Text>
                     </Box>
                     {/*{menuItems.map(({id, title, items}) => (*/}
@@ -28,6 +29,7 @@ export default function Footer() {
         </Box>
     );
 }
+export default Footer;
 
 const styles = {
     footerTopInner: {

@@ -1,22 +1,14 @@
 import {IoMdMenu} from 'react-icons/io';
-import React, {useContext} from 'react';
+import React, {useState} from 'react';
 import {Box, Image} from 'theme-ui';
 import {Link} from 'react-scroll';
-import {DrawerContext} from '../../contexts/drawer/drawer-context';
 import Drawer from '../../components/drawer';
-import Logo from '../../components/logo';
+import Logo from '../common/Logo';
 import menuItems from './header.data';
-import close from '../../assets/images/icons/close.png';
+import close from '../../assets/icons/close.png';
 
 const DrawerNav = () => {
-    const {state, dispatch} = useContext(DrawerContext);
-
-    // Toggle drawer
-    const toggleHandler = React.useCallback(() => {
-        dispatch({
-            type: 'TOGGLE',
-        });
-    }, [dispatch]);
+    const [open, setOpen] = useState(false);
 
     return (
         <Drawer
@@ -27,8 +19,8 @@ const DrawerNav = () => {
                     <IoMdMenu size="26px"/>
                 </Box>
             }
-            open={state?.isOpen}
-            toggleHandler={toggleHandler}
+            open={open}
+            toggleHandler={() => setOpen(!open)}
             closeButton={
                 <button sx={styles.closeButton}>
                     <Image src={close} alt="close"/>

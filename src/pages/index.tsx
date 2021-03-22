@@ -1,6 +1,6 @@
 import React from 'react';
 import {ThemeProvider} from "theme-ui";
-import SEO from '../components/seo';
+import SEO from '../components/common/SEO';
 import Layout from '../components/layout';
 import Banner from '../sections/banner';
 import theme from "../constants/theme";

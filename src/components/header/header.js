@@ -1,42 +1,39 @@
 import {Box, Button, Container, Flex} from 'theme-ui';
 import Sticky from 'react-stickynode';
-import Logo from '../../components/logo';
+import Logo from '../common/Logo';
 import {NavLink} from '../link';
-import {DrawerProvider} from '../../contexts/drawer/drawer-provider';
 import DrawerNav from './drawer-nav';
 import menuItems from './header.data';
 
 export default function Header() {
     return (
-        <DrawerProvider>
-            <Box sx={styles.headerWrapper}>
-                <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
-                    <Box as="header" variant="layout.header">
-                        <Container>
-                            <Box sx={styles.headerInner}>
-                                <Logo sx={styles.logo}/>
-                                <Flex as="nav" sx={styles.navbar} className="navbar">
-                                    <Box as="ul" sx={styles.navList}>
-                                        {menuItems.map(({path, label}, i) => (
-                                            <li key={i}>
-                                                <NavLink path={path} label={label}/>
-                                            </li>
-                                        ))}
-                                    </Box>
-                                    <Button variant="text" sx={styles.getStartedDesktop}>
-                                        Get Started
-                                    </Button>
-                                </Flex>
-                                <Button variant="text" sx={styles.getStartedMobile}>
+        <Box sx={styles.headerWrapper}>
+            <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
+                <Box as="header" variant="layout.header">
+                    <Container>
+                        <Box sx={styles.headerInner}>
+                            <Logo sx={styles.logo}/>
+                            <Flex as="nav" sx={styles.navbar} className="navbar">
+                                <Box as="ul" sx={styles.navList}>
+                                    {menuItems.map(({path, label}, i) => (
+                                        <li key={i}>
+                                            <NavLink path={path} label={label}/>
+                                        </li>
+                                    ))}
+                                </Box>
+                                <Button variant="text" sx={styles.getStartedDesktop}>
                                     Get Started
                                 </Button>
-                                <DrawerNav/>
-                            </Box>
-                        </Container>
-                    </Box>
-                </Sticky>
-            </Box>
-        </DrawerProvider>
+                            </Flex>
+                            <Button variant="text" sx={styles.getStartedMobile}>
+                                Get Started
+                            </Button>
+                            <DrawerNav/>
+                        </Box>
+                    </Container>
+                </Box>
+            </Sticky>
+        </Box>
     );
 }
 
