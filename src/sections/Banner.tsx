@@ -13,7 +13,7 @@ const Banner = () => {
                             Shine new light on your Calendar Data
                         </Heading>
                         <Text as="p">
-                            Show and export your data into into simple time sheets to bill your customers without the
+                            Show and export your data into simple time sheets to bill your customers without the
                             hassle of manually counting.
                         </Text>
                         <div style={{
