@@ -1,5 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+
 import { jsx, Box, Image, Heading, Text } from 'theme-ui';
 import { LearnMore } from 'components/link';
 

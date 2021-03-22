@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {Box, Container, Heading, Image, jsx, Text,} from 'theme-ui';
-import banner from 'assets/images/banner.png';
+import {Box, Container, Heading, Image, Text,} from 'theme-ui';
+import banner from '../assets/images/banner.png';
 import {rgba} from 'polished';
 
 const Banner = () => {

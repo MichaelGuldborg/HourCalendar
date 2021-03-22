@@ -1,5 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+
 import { jsx, Box, Container, Button, Flex, Checkbox, Label } from 'theme-ui';
 import { useState } from 'react';
 import { rgba } from 'polished';

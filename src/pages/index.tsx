@@ -1,12 +1,9 @@
 import React from 'react';
-import {ThemeProvider} from 'theme-ui';
-import theme from 'theme';
-import SEO from 'components/seo';
-import Layout from 'components/layout';
-import Banner from 'sections/banner';
-import Services from 'sections/services';
-import Features from 'sections/features';
-import Subscribe from 'sections/subscribe';
+import {ThemeProvider} from "theme-ui";
+import SEO from '../components/seo';
+import Layout from '../components/layout';
+import Banner from '../sections/banner';
+import theme from "../constants/theme";
 
 export const IndexPage = () => {
     return (

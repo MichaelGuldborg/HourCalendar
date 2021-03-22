@@ -1,5 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+
 import { Fragment } from 'react';
 import { jsx, Heading } from 'theme-ui';
 import { BsArrowRight } from 'react-icons/bs';

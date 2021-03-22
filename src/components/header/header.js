@@ -1,8 +1,8 @@
 import {Box, Button, Container, Flex} from 'theme-ui';
 import Sticky from 'react-stickynode';
-import Logo from 'components/logo';
-import {NavLink} from 'components/link';
-import {DrawerProvider} from 'contexts/drawer/drawer-provider';
+import Logo from '../../components/logo';
+import {NavLink} from '../link';
+import {DrawerProvider} from '../../contexts/drawer/drawer-provider';
 import DrawerNav from './drawer-nav';
 import menuItems from './header.data';
 

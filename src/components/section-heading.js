@@ -1,5 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+
 import { jsx, Box, Heading, Text, Image } from 'theme-ui';
 
 const SectionHeading = ({ title, description, emoji, ...props }) => {

@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {Box, Container, jsx, Text} from 'theme-ui';
-import Logo from 'components/logo';
+import {Box, Container, Text} from 'theme-ui';
+import Logo from '../../components/logo';
 import {rgba} from 'polished';
 
 export default function Footer() {

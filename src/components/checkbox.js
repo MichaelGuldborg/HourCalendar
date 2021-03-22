@@ -1,5 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+
 import React from 'react';
 import { RiCheckboxBlankFill, RiCheckboxFill } from 'react-icons/ri';
 import { jsx, Flex } from 'theme-ui';
